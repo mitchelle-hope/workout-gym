@@ -3,7 +3,7 @@
 <item>
 <bitmap
     android:gravity="fill"
-    android:src="@drawable/img_2"
+    android:src="@drawable/img_3"
     />
 </item>
 </selector>

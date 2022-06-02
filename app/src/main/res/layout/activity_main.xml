@@ -10,7 +10,7 @@
         android:id="@+id/imageView"
         android:layout_width="383dp"
         android:layout_height="272dp"
-        android:src="@drawable/img"
+        android:src="@drawable/img_3"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="271dp" />
 
