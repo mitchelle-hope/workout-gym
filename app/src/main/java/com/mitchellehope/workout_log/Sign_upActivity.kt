@@ -1,7 +1,9 @@
 package com.mitchellehope.workout_log
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -19,6 +21,7 @@ class Sign_upActivity : AppCompatActivity() {
     lateinit var etConfirm:TextInputEditText
     lateinit var tvSignin:TextView
     lateinit var tvLogin:TextView
+    lateinit var btnSignup:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -33,11 +36,18 @@ class Sign_upActivity : AppCompatActivity() {
         etPass= findViewById(R.id.etPass)
         tilConfirm = findViewById(R.id.tilConfirm)
         etConfirm = findViewById(R.id.etConfirm)
-        tvSignin=findViewById(R.id.tvLogin)
+        btnSignup =findViewById(R.id.btnSignup)
         tvLogin=findViewById(R.id.tvLogin)
 
-        tvSignin.setOnClickListener { validateLogin() }
 
+
+        tvSignin.setOnClickListener { validateLogin() }
+        btnSignup.setOnClickListener { validateLogin() }
+//        btnLogin.setOnClickListener { validateLogin() }
+        tvLogin.setOnClickListener{
+            var intent= Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
