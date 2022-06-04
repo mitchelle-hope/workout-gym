@@ -19,7 +19,7 @@ class Sign_upActivity : AppCompatActivity() {
     lateinit var etPass:TextInputEditText
     lateinit var tilConfirm:TextInputLayout
     lateinit var etConfirm:TextInputEditText
-    lateinit var tvSignin:TextView
+    lateinit var tvSignup:TextView
     lateinit var tvLogin:TextView
     lateinit var btnSignup:Button
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,9 +39,6 @@ class Sign_upActivity : AppCompatActivity() {
         btnSignup =findViewById(R.id.btnSignup)
         tvLogin=findViewById(R.id.tvLogin)
 
-
-
-        tvSignin.setOnClickListener { validateLogin() }
         btnSignup.setOnClickListener { validateLogin() }
 //        btnLogin.setOnClickListener { validateLogin() }
         tvLogin.setOnClickListener{
@@ -70,14 +67,14 @@ class Sign_upActivity : AppCompatActivity() {
 
         }
         var firstname =etFirstName.text.toString()
-        if (password.isBlank()) {
+        if (firstname.isBlank()) {
             tilFirstname.error="Your first name is required"
             error =true
 
 
             }
         var lastname =etLastname.text.toString()
-        if (password.isBlank()) {
+        if (lastname.isBlank()) {
             tilLastname.error="Your last name is required"
             error =true
 
@@ -85,8 +82,8 @@ class Sign_upActivity : AppCompatActivity() {
 
         }
         var confirmpass =etConfirm.text.toString()
-        if (password.isBlank()) {
-            tilLastname.error="Your last name is required"
+        if (confirmpass.isBlank()) {
+            tilConfirm.error="Your last name is required"
             error =true
 
 
