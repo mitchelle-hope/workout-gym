@@ -3,6 +3,7 @@ package com.mitchellehope.workout_log
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputEditText
@@ -55,6 +56,10 @@ class Sign_upActivity : AppCompatActivity() {
         var email=etSignemail.text.toString()
         if (email.isBlank()) {
             tilSignemail.error="Email is required"
+            error=true
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            tilSignemail.error="not a valid email"
             error=true
         }
         var password =etPass.text.toString()
