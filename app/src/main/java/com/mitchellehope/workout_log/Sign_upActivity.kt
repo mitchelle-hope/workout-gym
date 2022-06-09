@@ -40,7 +40,7 @@ class Sign_upActivity : AppCompatActivity() {
         tvLogin=findViewById(R.id.tvLogin)
 
         btnSignup.setOnClickListener { validateLogin() }
-//        btnLogin.setOnClickListener { validateLogin() }
+
         tvLogin.setOnClickListener{
             var intent= Intent(this,LoginActivity::class.java)
             startActivity(intent)
@@ -88,6 +88,9 @@ class Sign_upActivity : AppCompatActivity() {
 
 
 
+        }
+        if (password != confirmpass){
+            tilConfirm.error = "Invalid Password"
         }
 }
 
