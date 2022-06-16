@@ -22,19 +22,19 @@ class HomeActivity : AppCompatActivity() {
         bottom_navigation.setOnItemSelectedListener { item->
             when(item.itemId){
                 R.id.plan->{
-                    var transaction=supportFragmentManager.beginTransaction()
+                    val transaction=supportFragmentManager.beginTransaction()
                     transaction.replace(R.id.fcvhome,PlanFragment())
                     transaction.commit()
                     true
                 }
                 R.id.track->{
-                    var transaction=supportFragmentManager.beginTransaction()
+                    val transaction=supportFragmentManager.beginTransaction()
                     transaction.replace(R.id.fcvhome,TrackFragment())
                     transaction.commit()
                     true
                 }
                 R.id.profile->{
-                    var transaction=supportFragmentManager.beginTransaction()
+                    val transaction=supportFragmentManager.beginTransaction()
                     transaction.replace(R.id.fcvhome,ProfileFragment())
                     transaction.commit()
                     true
