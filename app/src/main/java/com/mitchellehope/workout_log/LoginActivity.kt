@@ -35,15 +35,15 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-//     fun validateLogin(){
-//         var error= false
-//         tilEmail.error=null
-//         tilPassword.error=null
-//         var email=etEmail.text.toString()
-//         if (email.isBlank()) {
-//             tilEmail.error="Email is required"
-//             error=true
-//         }
+    fun validateLogin(){
+        var error= false
+        tilEmail.error=null
+        tilPassword.error=null
+        var email=etEmail.text.toString()
+        if (email.isBlank()) {
+            tilEmail.error="Email is required"
+            error=true
+        }
         var password =etPassword.text.toString()
         if (password.isBlank()) {
             tilPassword.error="password is required"
