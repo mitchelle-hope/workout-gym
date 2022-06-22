@@ -18,7 +18,6 @@ lateinit var binding: ActivityLoginBinding
         setContentView(binding.root)
 
 
-
         binding.btnLogin.setOnClickListener { validateLogin()
         startActivity(Intent(this,HomeActivity::class.java))}
         binding.tvSignup.setOnClickListener{
@@ -29,10 +28,11 @@ lateinit var binding: ActivityLoginBinding
     }
 
     fun validateLogin(){
-        var error= false
+        var error=false
         binding.tilEmail.error=null
         binding.tilPassword.error=null
         var email=binding.etEmail.text.toString()
+
         if (email.isBlank()) {
             binding.tilEmail.error="Email is required"
             error=true
@@ -41,7 +41,6 @@ lateinit var binding: ActivityLoginBinding
         if (password.isBlank()) {
             binding.tilPassword.error="password is required"
             error =true
-
         }
         if(!error){
 
